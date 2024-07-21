@@ -1,7 +1,7 @@
 #pragma once
 
 #include <Arduino.h>
-#include "MyCustomClass.h"
+#include "MD302_Attitude_Indicator.h"
 
 // only one entry required if you have only one custom device
 enum {
@@ -20,7 +20,7 @@ public:
 private:
     bool           getStringFromEEPROM(uint16_t addreeprom, char *buffer);
     bool           _initialized = false;
-    MyCustomClass *_mydevice;
+    MD302_Attitude_Indicator *_mydevice;
     uint8_t        _pin1, _pin2, _pin3;
     uint8_t        _customType = 0;
 };
